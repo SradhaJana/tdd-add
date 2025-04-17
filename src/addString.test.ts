@@ -12,4 +12,13 @@ describe('testaddstring', () => {
       test('adds two numbers', () => {
         expect(addString('1,5')).toBe(6);
       });
+
+      test('adds multiple numbers', () => {
+        expect(addString('1,2,3,4')).toBe(10);
+      });
+
+      test('add negative numbers', () => {
+        expect(() => addString('-1,1')).toThrow('Negative numbers not allowed: -1');
+      });
+      
 });
